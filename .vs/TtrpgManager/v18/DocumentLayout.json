@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "I:\\Projects_dotnet\\ttrpg-manager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|i:\\projects_dotnet\\ttrpg-manager\\ttrpgmanager.domain\\adventure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|solutionrelative:ttrpgmanager.domain\\adventure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|i:\\projects_dotnet\\ttrpg-manager\\ttrpgmanager.domain\\campaign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|solutionrelative:ttrpgmanager.domain\\campaign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|i:\\projects_dotnet\\ttrpg-manager\\ttrpgmanager.domain\\ttrpgmanager.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|solutionrelative:ttrpgmanager.domain\\ttrpgmanager.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Adventure.cs",
+              "DocumentMoniker": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Adventure.cs",
+              "RelativeDocumentMoniker": "TtrpgManager.Domain\\Adventure.cs",
+              "ToolTip": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Adventure.cs",
+              "RelativeToolTip": "TtrpgManager.Domain\\Adventure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T06:58:22.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Campaign.cs",
+              "DocumentMoniker": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Campaign.cs",
+              "RelativeDocumentMoniker": "TtrpgManager.Domain\\Campaign.cs",
+              "ToolTip": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Campaign.cs",
+              "RelativeToolTip": "TtrpgManager.Domain\\Campaign.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T06:47:39.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TtrpgManager.Domain",
+              "DocumentMoniker": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\TtrpgManager.Domain.csproj",
+              "RelativeDocumentMoniker": "TtrpgManager.Domain\\TtrpgManager.Domain.csproj",
+              "ToolTip": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\TtrpgManager.Domain.csproj",
+              "RelativeToolTip": "TtrpgManager.Domain\\TtrpgManager.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-12T06:43:07.316Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
