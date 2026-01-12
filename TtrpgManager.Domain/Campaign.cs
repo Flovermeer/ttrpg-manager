@@ -1,45 +1,25 @@
 ﻿namespace TtrpgManager.Domain;
 
-public class Campaign
+public class Campaign: EntityWithCoverImage
 {
-    public Guid Id { get; }
-    public string Name { get; private set; }
     public string? Description { get; private set; }
-    public string? CoverImageId { get; private set; }
 
-    public Campaign(string name, string? description = null)
+    public Campaign(string name, string? description = null): base(name)
     {
         if (string.IsNullOrWhiteSpace(name))
         {
             throw new ArgumentException("Campaign name is required, it cannot be null or empty.", nameof(name));
         }
 
-        Id = Guid.NewGuid();
-        Name = name;
         Description = description;
     }
 
-    public void Rename(string newName)
-    {
-        if (string.IsNullOrWhiteSpace(newName))
-        {
-            throw new ArgumentException("Campaign name is required, it cannot be null or empty.", nameof(newName));
-        }
-        Name = newName;
-    }
-
+    /// <summary>
+    /// Updates the description associated with the current instance.
+    /// </summary>
+    /// <param name="newDescription">The new description to assign. Can be <see langword="null"/> to clear the existing description.</param>
     public void UpdateDescription(string? newDescription)
     {
         Description = newDescription;
-    }
-
-    public void SetCoverImage(string imageId)
-    {
-        CoverImageId = imageId;
-    }
-
-    public void RemoveCoverImage()
-    {
-        CoverImageId = null;
     }
 }
