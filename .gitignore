@@ -37,4 +37,10 @@ ScaffoldingReadMe.txt
 *.bin
 *.vsidx
 *.v2
-.vs/*
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

@@ -6,7 +6,9 @@ public class Place: EntityWithCoverImage
     public Guid? AdventureId { get; private set; }
     public string? Description { get; private set; }
     public List<Npc> Npcs { get; private set;  }
-    
+
+    protected Place() { } // EF
+
     public Place(Guid? campaignId, Guid? adventureId, string name, string? description = null, List<Npc>? npcs = null): base(name)
     {
         if ((campaignId == null && adventureId == null) || (campaignId != null && adventureId != null))

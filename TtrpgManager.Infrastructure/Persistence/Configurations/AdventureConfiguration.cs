@@ -8,7 +8,7 @@ public class AdventureConfiguration : IEntityTypeConfiguration<Adventure>
 {
     public void Configure(EntityTypeBuilder<Adventure> builder)
     {
-        builder.ToTable("Adventures");
+        builder.ToTable("adventures");
 
         builder.HasKey(x => x.Id);
 
@@ -19,11 +19,19 @@ public class AdventureConfiguration : IEntityTypeConfiguration<Adventure>
             .IsRequired()
             .HasMaxLength(200);
 
+        builder.Property(x => x.Summary);
+
         builder.Property(x => x.CoverImageId)
             .HasMaxLength(255);
 
-        builder.Property(x => x.Summary);
-
         builder.Property(x => x.CampaignId).IsRequired();
+
+        // FK CampaignId -> Campaign.Id (sans navigation)
+        builder.HasOne<Campaign>()
+            .WithMany()
+            .HasForeignKey(x => x.CampaignId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasIndex(x => new { x.CampaignId, x.Name });
     }
 }

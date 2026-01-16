@@ -8,7 +8,7 @@ public class CampaignConfiguration : IEntityTypeConfiguration<Campaign>
 {
     public void Configure(EntityTypeBuilder<Campaign> builder)
     {
-        builder.ToTable("Campaigns");
+        builder.ToTable("campaigns");
 
         builder.HasKey(x => x.Id);
 
@@ -18,6 +18,9 @@ public class CampaignConfiguration : IEntityTypeConfiguration<Campaign>
         builder.Property(x => x.Name)
             .IsRequired()
             .HasMaxLength(200);
+
+        builder.Property(x => x.Description)
+           .HasMaxLength(4000);
 
         builder.Property(x => x.CoverImageId)
             .HasMaxLength(255);

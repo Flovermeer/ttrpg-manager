@@ -7,9 +7,11 @@ public class Npc: EntityWithCoverImage
     public int Age { get; private set; }
     public string Occupation { get; private set; }
     public bool IsFriendly { get; private set; }
+    public List<Place> Places { get; private set; }
 
+    protected Npc() { } // EF
 
-    public Npc(Guid? campaignId, Guid? adventureId, string name, int age, string occupation, bool isFriendly = true) : base(name)
+    public Npc(Guid? campaignId, Guid? adventureId, string name, int age, string occupation, List<Place>? places = null, bool isFriendly = true) : base(name)
     {
         if ((campaignId == null && adventureId == null) || (campaignId != null && adventureId != null))
         {
@@ -21,11 +23,17 @@ public class Npc: EntityWithCoverImage
             throw new ArgumentException("NPC name is required.", nameof(name));
         }
 
+        if (string.IsNullOrWhiteSpace(occupation))
+        {
+            throw new ArgumentException("Occupation is required.", nameof(occupation));
+        }
+
         CampaignId = campaignId;
         AdventureId = adventureId;
         Age = age;
         Occupation = occupation;
         IsFriendly = isFriendly;
+        Places = places ?? new();
     }
 
     /// <summary>

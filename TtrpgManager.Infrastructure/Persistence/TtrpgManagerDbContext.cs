@@ -19,5 +19,6 @@ public class TtrpgManagerDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(TtrpgManagerDbContext).Assembly);
+        base.OnModelCreating(modelBuilder);
     }
 }

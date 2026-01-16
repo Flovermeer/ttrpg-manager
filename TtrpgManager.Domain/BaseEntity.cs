@@ -2,18 +2,21 @@
 
 public abstract class BaseEntity
 {
-    public Guid Id { get; }
-    public string Name { get; private set; }
+    public Guid Id { get; private set;  }
+    public string Name { get; private set; } = null!;
 
-    protected BaseEntity(string Name)
+    protected BaseEntity() { } // needed for EF Core
+
+    protected BaseEntity(string name)
     {
         Id = Guid.NewGuid();
 
-        if (string.IsNullOrWhiteSpace(Name))
+        if (string.IsNullOrWhiteSpace(name))
         {
-            throw new ArgumentException("Name is required.", nameof(Name));
+            throw new ArgumentException("Name is required.", nameof(name));
         }
-        this.Name = Name;
+        
+        Name = name;
     }
 
     public void Rename(string newName)
@@ -22,6 +25,7 @@ public abstract class BaseEntity
         {
             throw new ArgumentException("Name is required.", nameof(newName));
         }
+
         Name = newName;
     }
 
