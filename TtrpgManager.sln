@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11408.102 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtrpgManager.Api", "TtrpgManager.Api\TtrpgManager.Api.csproj", "{D5C8B9CF-05E0-400E-ADD8-F78AA774B59C}"
 EndProject
@@ -10,8 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtrpgManager.Domain", "TtrpgManager.Domain\TtrpgManager.Domain.csproj", "{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtrpgManager.Infrastructure", "TtrpgManager.Infrastructure\TtrpgManager.Infrastructure.csproj", "{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtrpgManager.Web", "TtrpgManager.Web\TtrpgManager.Web.csproj", "{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtrpgManager.Desktop", "TtrpgManager.Desktop\TtrpgManager.Desktop.csproj", "{96EF0618-8B54-401E-80AF-2072F322E00E}"
 EndProject
@@ -73,18 +71,6 @@ Global
 		{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}.Release|x64.Build.0 = Release|Any CPU
 		{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}.Release|x86.ActiveCfg = Release|Any CPU
 		{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}.Release|x86.Build.0 = Release|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Debug|x64.Build.0 = Debug|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Debug|x86.Build.0 = Debug|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Release|x64.ActiveCfg = Release|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Release|x64.Build.0 = Release|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Release|x86.ActiveCfg = Release|Any CPU
-		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Release|x86.Build.0 = Release|Any CPU
 		{96EF0618-8B54-401E-80AF-2072F322E00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96EF0618-8B54-401E-80AF-2072F322E00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96EF0618-8B54-401E-80AF-2072F322E00E}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -100,5 +86,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D212866-FFC1-4C15-9F37-855B92A3314F}
 	EndGlobalSection
 EndGlobal
