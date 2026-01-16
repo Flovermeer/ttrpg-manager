@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtrpgManager.Infrastructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtrpgManager.Web", "TtrpgManager.Web\TtrpgManager.Web.csproj", "{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtrpgManager.Desktop", "TtrpgManager.Desktop\TtrpgManager.Desktop.csproj", "{96EF0618-8B54-401E-80AF-2072F322E00E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Release|x64.Build.0 = Release|Any CPU
 		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Release|x86.ActiveCfg = Release|Any CPU
 		{A6674BDE-71AE-4795-84EE-B1BAF7CE8651}.Release|x86.Build.0 = Release|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Debug|x64.Build.0 = Debug|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Debug|x86.Build.0 = Debug|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Release|x64.ActiveCfg = Release|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Release|x64.Build.0 = Release|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Release|x86.ActiveCfg = Release|Any CPU
+		{96EF0618-8B54-401E-80AF-2072F322E00E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
