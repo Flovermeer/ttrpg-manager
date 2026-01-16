@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "I:\\Projects_dotnet\\ttrpg-manager\\",
+  "WorkspaceRootPath": "F:\\dotnet\\ttrpg-manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|i:\\projects_dotnet\\ttrpg-manager\\ttrpgmanager.domain\\adventure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}|TtrpgManager.Infrastructure\\TtrpgManager.Infrastructure.csproj|f:\\dotnet\\ttrpg-manager\\ttrpgmanager.infrastructure\\persistence\\configurations\\adventureconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}|TtrpgManager.Infrastructure\\TtrpgManager.Infrastructure.csproj|solutionrelative:ttrpgmanager.infrastructure\\persistence\\configurations\\adventureconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|f:\\dotnet\\ttrpg-manager\\ttrpgmanager.domain\\adventure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|solutionrelative:ttrpgmanager.domain\\adventure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|i:\\projects_dotnet\\ttrpg-manager\\ttrpgmanager.domain\\campaign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|solutionrelative:ttrpgmanager.domain\\campaign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}|TtrpgManager.Infrastructure\\TtrpgManager.Infrastructure.csproj|f:\\dotnet\\ttrpg-manager\\ttrpgmanager.infrastructure\\persistence\\configurations\\campaignconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}|TtrpgManager.Infrastructure\\TtrpgManager.Infrastructure.csproj|solutionrelative:ttrpgmanager.infrastructure\\persistence\\configurations\\campaignconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|i:\\projects_dotnet\\ttrpg-manager\\ttrpgmanager.domain\\ttrpgmanager.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7E85F60F-DBEA-4F3B-882F-8A12EEF67E4D}|TtrpgManager.Domain\\TtrpgManager.Domain.csproj|solutionrelative:ttrpgmanager.domain\\ttrpgmanager.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}|TtrpgManager.Infrastructure\\TtrpgManager.Infrastructure.csproj|f:\\dotnet\\ttrpg-manager\\ttrpgmanager.infrastructure\\persistence\\ttrpgmanagerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE4F37B-ADB3-4DCC-BE6A-74C9CA58A262}|TtrpgManager.Infrastructure\\TtrpgManager.Infrastructure.csproj|solutionrelative:ttrpgmanager.infrastructure\\persistence\\ttrpgmanagerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Adventure.cs",
-              "DocumentMoniker": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Adventure.cs",
+              "DocumentMoniker": "F:\\dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Adventure.cs",
               "RelativeDocumentMoniker": "TtrpgManager.Domain\\Adventure.cs",
-              "ToolTip": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Adventure.cs",
+              "ToolTip": "F:\\dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Adventure.cs",
               "RelativeToolTip": "TtrpgManager.Domain\\Adventure.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAYwCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T06:58:22.224Z",
+              "WhenOpened": "2026-01-12T20:19:40.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Campaign.cs",
-              "DocumentMoniker": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Campaign.cs",
-              "RelativeDocumentMoniker": "TtrpgManager.Domain\\Campaign.cs",
-              "ToolTip": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\Campaign.cs",
-              "RelativeToolTip": "TtrpgManager.Domain\\Campaign.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AdventureConfiguration.cs",
+              "DocumentMoniker": "F:\\dotnet\\ttrpg-manager\\TtrpgManager.Infrastructure\\Persistence\\Configurations\\AdventureConfiguration.cs",
+              "RelativeDocumentMoniker": "TtrpgManager.Infrastructure\\Persistence\\Configurations\\AdventureConfiguration.cs",
+              "ToolTip": "F:\\dotnet\\ttrpg-manager\\TtrpgManager.Infrastructure\\Persistence\\Configurations\\AdventureConfiguration.cs",
+              "RelativeToolTip": "TtrpgManager.Infrastructure\\Persistence\\Configurations\\AdventureConfiguration.cs",
+              "ViewState": "AgIAAAYAAADAzMzMzMwUwBoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T06:47:39.321Z",
+              "WhenOpened": "2026-01-12T20:18:57.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TtrpgManager.Domain",
-              "DocumentMoniker": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\TtrpgManager.Domain.csproj",
-              "RelativeDocumentMoniker": "TtrpgManager.Domain\\TtrpgManager.Domain.csproj",
-              "ToolTip": "I:\\Projects_dotnet\\ttrpg-manager\\TtrpgManager.Domain\\TtrpgManager.Domain.csproj",
-              "RelativeToolTip": "TtrpgManager.Domain\\TtrpgManager.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-12T06:43:07.316Z",
+              "Title": "CampaignConfiguration.cs",
+              "DocumentMoniker": "F:\\dotnet\\ttrpg-manager\\TtrpgManager.Infrastructure\\Persistence\\Configurations\\CampaignConfiguration.cs",
+              "RelativeDocumentMoniker": "TtrpgManager.Infrastructure\\Persistence\\Configurations\\CampaignConfiguration.cs",
+              "ToolTip": "F:\\dotnet\\ttrpg-manager\\TtrpgManager.Infrastructure\\Persistence\\Configurations\\CampaignConfiguration.cs",
+              "RelativeToolTip": "TtrpgManager.Infrastructure\\Persistence\\Configurations\\CampaignConfiguration.cs",
+              "ViewState": "AgIAAAMAAABgZmZmZmYkwAwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T20:16:53.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TtrpgManagerDbContext.cs",
+              "DocumentMoniker": "F:\\dotnet\\ttrpg-manager\\TtrpgManager.Infrastructure\\Persistence\\TtrpgManagerDbContext.cs",
+              "RelativeDocumentMoniker": "TtrpgManager.Infrastructure\\Persistence\\TtrpgManagerDbContext.cs",
+              "ToolTip": "F:\\dotnet\\ttrpg-manager\\TtrpgManager.Infrastructure\\Persistence\\TtrpgManagerDbContext.cs",
+              "RelativeToolTip": "TtrpgManager.Infrastructure\\Persistence\\TtrpgManagerDbContext.cs",
+              "ViewState": "AgIAAAMAAABgZmZmZmYkwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T19:59:17.009Z",
               "EditorCaption": ""
             }
           ]
