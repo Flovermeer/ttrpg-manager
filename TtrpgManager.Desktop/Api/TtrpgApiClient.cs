@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace TtrpgManager.Desktop.Api;
-public sealed class TtrpgApiClient
+
+public sealed class TtrpgApiClient : ITtrpgApiClient
 {
     public readonly HttpClient HttpClient;
 

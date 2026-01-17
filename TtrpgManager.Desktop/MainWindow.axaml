@@ -1,33 +1,24 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:TtrpgManager.Desktop.ViewModels"
-        xmlns:api="clr-namespace:TtrpgManager.Desktop.Api"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+        xmlns:views="clr-namespace:TtrpgManager.Desktop.Views"
         x:Class="TtrpgManager.Desktop.MainWindow"
-        x:DataType="vm:CampaignsViewModel"
-        Title="TtrpgManager.Desktop">
+        x:DataType="vm:MainViewModel"
+        Title="TTRPG Manager" Width="1000" Height="700">
 
-	<DockPanel Margin="16">
+	<Window.DataContext>
+		<vm:MainViewModel/>
+	</Window.DataContext>
 
-		<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="8">
-			<Button Content="Charger" Click="OnLoadClick" />
-		</StackPanel>
+	<ContentControl Content="{Binding CurrentViewModel}">
+		<ContentControl.DataTemplates>
+			<DataTemplate DataType="{x:Type vm:HomeViewModel}">
+				<views:HomeView/>
+			</DataTemplate>
 
-		<ListBox Margin="0,12,0,0" ItemsSource="{Binding Campaigns}">
-			<ListBox.ItemTemplate>
-				<DataTemplate x:DataType="api:CampaignDto">
-					<StackPanel Margin="0,6,0,6">
-						<TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" />
-						<TextBlock Text="{Binding Description}" Opacity=".7" />
-					</StackPanel>
-				</DataTemplate>
-			</ListBox.ItemTemplate>
-		</ListBox>
-
-	</DockPanel>
-
+			<DataTemplate DataType="{x:Type vm:CampaignViewModel}">
+				<views:CampaignView/>
+			</DataTemplate>
+		</ContentControl.DataTemplates>
+	</ContentControl>
 </Window>
-
-

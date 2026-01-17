@@ -1,32 +1,19 @@
-﻿using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using TtrpgManager.Desktop.Api;
+﻿namespace TtrpgManager.Desktop.ViewModels;
 
-namespace TtrpgManager.Desktop.ViewModels;
-
-public sealed class CampaignsViewModel
+public sealed class CampaignViewModel : ViewModelBase
 {
-    private readonly TtrpgApiClient _api;
+    private readonly MainViewModel shell;
 
-    // Liste observable = équivalent du state réactif en Vue
-    public ObservableCollection<CampaignDto> Campaigns { get; } = new();
+    public string CampaignName { get; }
 
-    public CampaignsViewModel(TtrpgApiClient api)
+    public CampaignViewModel(MainViewModel shell, string campaignName)
     {
-        _api = api;
+        this.shell = shell;
+        CampaignName = campaignName;
     }
 
-    // Méthode appelée par la View (bouton, chargement, etc.)
-    public async Task LoadAsync()
+    public void BackToHome()
     {
-        Campaigns.Clear();
-
-        var items = await _api.ListCampaignsAsync();
-
-        foreach (var campaign in items)
-        {
-            Campaigns.Add(campaign);
-        }
+        shell.NavigateHome();
     }
 }
-
