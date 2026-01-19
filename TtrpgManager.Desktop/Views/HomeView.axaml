@@ -1,9 +1,76 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="TtrpgManager.Desktop.Views.HomeView">
+             xmlns:vm="clr-namespace:TtrpgManager.Desktop.ViewModels"
+             x:Class="TtrpgManager.Desktop.Views.HomeView"
+             x:DataType="vm:HomeViewModel">
 
-	<TextBlock Text="Home view"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
+  <Grid RowDefinitions="Auto,*" ColumnDefinitions="*"
+        Margin="24" RowSpacing="16">
 
+    <!-- Header -->
+    <Border Padding="16" CornerRadius="12">
+      <StackPanel Spacing="6">
+        <TextBlock Text="TTRPG Manager" FontSize="28" FontWeight="Bold"/>
+        <TextBlock Text="Gérez vos campagnes, PNJ, lieux et aventures."
+                   Opacity="0.8"/>
+      </StackPanel>
+    </Border>
+
+    <!-- Content -->
+    <Grid Grid.Row="1" ColumnDefinitions="2*,*" ColumnSpacing="16">
+
+      <!-- Left: Recent campaigns -->
+      <Border Padding="16" CornerRadius="12">
+        <DockPanel>
+
+          <TextBlock DockPanel.Dock="Top"
+                     Text="Campagnes récentes"
+                     FontSize="16"
+                     FontWeight="SemiBold"
+                     Margin="0,0,0,12"/>
+
+			<!-- Loader -->
+			<StackPanel
+            IsVisible="{Binding IsLoading}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Spacing="8">
+
+				<ProgressBar IsIndeterminate="True" Width="200"/>
+				<TextBlock Text="Chargement des campagnes…" />
+			</StackPanel>
+
+          <ListBox ItemsSource="{Binding RecentCampaigns}" IsVisible="{Binding !IsLoading}">
+            <ListBox.ItemTemplate>
+              <DataTemplate>
+                <Border Padding="12" CornerRadius="10" Margin="0,0,0,8">
+                  <StackPanel>
+                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding Description}" Opacity="0.8"/>
+                  </StackPanel>
+                </Border>
+              </DataTemplate>
+            </ListBox.ItemTemplate>
+          </ListBox>
+
+        </DockPanel>
+      </Border>
+
+      <!-- Right: actions -->
+      <Border Grid.Column="1" Padding="16" CornerRadius="12">
+        <StackPanel Spacing="10">
+          <TextBlock Text="Actions" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,6"/>
+          <Button Content="Créer une campagne" Command="{Binding CreateCampaignCommand}"/>
+          <Button Content="Ouvrir une campagne" Command="{Binding OpenCampaignCommand}"/>
+          <Button Content="Paramètres" Command="{Binding OpenSettingsCommand}" Opacity="0.9"/>
+
+          <Separator Margin="0,10,0,10"/>
+
+          <TextBlock Text="Astuce : une campagne regroupe Aventuriers, PNJ, Lieux et Chapitres."
+                     TextWrapping="Wrap" Opacity="0.75"/>
+        </StackPanel>
+      </Border>
+
+    </Grid>
+  </Grid>
 </UserControl>

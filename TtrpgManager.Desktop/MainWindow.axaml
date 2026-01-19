@@ -6,10 +6,6 @@
         x:DataType="vm:MainViewModel"
         Title="TTRPG Manager" Width="1000" Height="700">
 
-	<Window.DataContext>
-		<vm:MainViewModel/>
-	</Window.DataContext>
-
 	<ContentControl Content="{Binding CurrentViewModel}">
 		<ContentControl.DataTemplates>
 			<DataTemplate DataType="{x:Type vm:HomeViewModel}">

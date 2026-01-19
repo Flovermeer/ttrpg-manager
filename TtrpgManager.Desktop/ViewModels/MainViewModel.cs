@@ -12,7 +12,7 @@ public partial class MainViewModel : ViewModelBase
 
     private readonly ITtrpgApiClient api;
 
-    public MainViewModel()
+    public MainViewModel(HomeViewModel homeViewModel)
     {
         var httpClient = new HttpClient
         {
@@ -21,16 +21,23 @@ public partial class MainViewModel : ViewModelBase
 
         api = new TtrpgApiClient(httpClient);
 
-        CurrentViewModel = new HomeViewModel(this, api);
+        CurrentViewModel = homeViewModel;
     }
 
     public void NavigateToCampaign(string campaignName)
     {
-        CurrentViewModel = new CampaignViewModel(this, campaignName);
+        CurrentViewModel = new CampaignViewModel();
     }
 
     public void NavigateHome()
     {
-        CurrentViewModel = new HomeViewModel(this, api);
+    //    CurrentViewModel = new HomeViewModel();
+    }
+
+    public void NavigateHomePage()
+    {
+       // var vm = services.GetRequiredService<HomeViewModel>();
+      //  CurrentViewModel = vm;
+     //   vm.LoadAsyncCommand.Execute(null);
     }
 }

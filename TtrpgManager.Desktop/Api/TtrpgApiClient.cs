@@ -15,7 +15,7 @@ public sealed class TtrpgApiClient : ITtrpgApiClient
         HttpClient = httpClient;
     }
 
-    public async Task<List<CampaignDto>> ListCampaignsAsync(CancellationToken cancellationToken = default)
+    public async Task<List<CampaignDto>> GetCampaignsAsync(CancellationToken cancellationToken = default)
     {
         var result = await HttpClient.GetFromJsonAsync<List<CampaignDto>>("/api/campaigns", cancellationToken);
         return result ?? new List<CampaignDto>();

@@ -1,44 +1,84 @@
-﻿using System.Collections.ObjectModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using TtrpgManager.Desktop.Api;
 
-
 namespace TtrpgManager.Desktop.ViewModels;
 
-public sealed class HomeViewModel : ViewModelBase
+public partial class HomeViewModel : ViewModelBase
 {
-    private readonly MainViewModel shell;
-    private readonly ITtrpgApiClient api;
+    private readonly ITtrpgApiClient Api;
+    //private readonly INavigationService NavigationService;
+    public ObservableCollection<RecentCampaignItemVm> RecentCampaigns { get; } = new();
+    
+    // = ref(true) Vue.js
+    [ObservableProperty]
+    private bool isLoading = false;
 
-    // Liste observable = équivalent du state réactif en Vue
-    public ObservableCollection<CampaignDto> Campaigns { get; } = new();
-
-    public HomeViewModel(MainViewModel shell, ITtrpgApiClient api)
+    public HomeViewModel(ITtrpgApiClient api)
     {
-        this.shell = shell;
-        this.api = api;
+       this.Api = api;
+      // this.NavigationService = navigationService;
     }
 
-    // Chargement des campagnes (appelé par la View)
-    public async Task LoadAsync()
+    [RelayCommand]
+    private async Task LoadAsync()
     {
-        Campaigns.Clear();
-
-        var items = await api.ListCampaignsAsync();
-        foreach (var campaign in items)
+        try
         {
-            Campaigns.Add(campaign);
+            IsLoading = true;
+            RecentCampaigns.Clear();
+            var campaigns = await Api.GetCampaignsAsync();
+
+            foreach (var campaign in campaigns)
+            {
+                RecentCampaigns.Add(new RecentCampaignItemVm(
+                    campaign.Name,
+                    campaign.Description));
+            }
         }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+
     }
 
-    // Ouverture d’une campagne depuis la liste
-    public void OpenCampaign(CampaignDto campaign)
+    [RelayCommand]
+    private void CreateCampaign()
     {
-        if (campaign == null)
-        {
-            return;
-        }
+        // TODO: naviguer vers CampaignView (mode création)
+    }
 
-        shell.NavigateToCampaign(campaign.Name);
+    [RelayCommand]
+    private void OpenCampaign()
+    {
+        // TODO: ouvrir un fichier / picker / ou choisir une récente
+    }
+
+    [RelayCommand]
+    private void OpenSettings()
+    {
+        // TODO: settings view
+    }
+}
+
+public partial class RecentCampaignItemVm : ObservableObject
+{
+    public string Name { get; }
+    public string? Description { get; }
+
+
+    public RecentCampaignItemVm(string name, string? description = null)
+    {
+        Name = name;
+        Description = description;
     }
 }

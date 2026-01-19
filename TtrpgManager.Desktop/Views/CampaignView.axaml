@@ -1,9 +1,60 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="TtrpgManager.Desktop.Views.CampaignView">
+             xmlns:vm="clr-namespace:TtrpgManager.Desktop.ViewModels"
+             x:Class="TtrpgManager.Desktop.Views.CampaignView"
+             x:DataType="vm:CampaignViewModel">
 
-	<TextBlock Text="Campaign view"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
+	<Grid RowDefinitions="Auto,*" Margin="24" RowSpacing="16">
 
+		<!-- Header -->
+		<Border Padding="16" CornerRadius="12">
+			<DockPanel LastChildFill="True">
+				<StackPanel DockPanel.Dock="Left" Spacing="4">
+					<TextBlock Text="{Binding CampaignTitle}" FontSize="22" FontWeight="Bold"/>
+					<TextBlock Text="{Binding CampaignSubtitle}" Opacity="0.75"/>
+				</StackPanel>
+
+				<StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Spacing="8">
+					<Button Content="Retour" Command="{Binding GoHomeCommand}"/>
+					<Button Content="Exporter" Command="{Binding ExportCommand}"/>
+				</StackPanel>
+			</DockPanel>
+		</Border>
+
+		<!-- Body -->
+		<Grid Grid.Row="1" ColumnDefinitions="260,*" ColumnSpacing="16">
+
+			<!-- Left navigation -->
+			<Border Padding="12" CornerRadius="12">
+				<StackPanel Spacing="8">
+					<TextBlock Text="Sections" FontWeight="SemiBold" Margin="4,0,0,6"/>
+
+					<Button Content="Adventures" Command="{Binding NavigateCommand}" CommandParameter="Adventures"/>
+					<Button Content="NPCs"       Command="{Binding NavigateCommand}" CommandParameter="NPCs"/>
+					<Button Content="Places"     Command="{Binding NavigateCommand}" CommandParameter="Places"/>
+					<Button Content="Players"    Command="{Binding NavigateCommand}" CommandParameter="Players"/>
+
+					<Separator Margin="0,10,0,10"/>
+
+					<TextBlock Text="Sélection :"/>
+					<TextBlock Text="{Binding CurrentSection}" FontWeight="SemiBold"/>
+				</StackPanel>
+			</Border>
+
+			<!-- Right content -->
+			<Border Grid.Column="1" Padding="16" CornerRadius="12">
+				<StackPanel Spacing="10">
+					<TextBlock Text="{Binding SectionTitle}" FontSize="18" FontWeight="SemiBold"/>
+					<TextBlock Text="{Binding SectionHint}" Opacity="0.75" TextWrapping="Wrap"/>
+
+					<Separator Margin="0,8,0,8"/>
+
+					<!-- Placeholder -->
+					<TextBlock Text="(Contenu à venir : liste, recherche, boutons Ajouter/Éditer…)"
+							   Opacity="0.7"/>
+				</StackPanel>
+			</Border>
+
+		</Grid>
+	</Grid>
 </UserControl>

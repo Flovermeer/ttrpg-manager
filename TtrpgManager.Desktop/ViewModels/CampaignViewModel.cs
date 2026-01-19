@@ -1,19 +1,50 @@
-﻿namespace TtrpgManager.Desktop.ViewModels;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
-public sealed class CampaignViewModel : ViewModelBase
+namespace TtrpgManager.Desktop.ViewModels;
+
+public partial class CampaignViewModel : ViewModelBase
 {
-    private readonly MainViewModel shell;
+    [ObservableProperty]
+    private string campaignTitle = "Campagne";
 
-    public string CampaignName { get; }
+    [ObservableProperty]
+    private string campaignSubtitle = "Système • Dernière modif • etc.";
 
-    public CampaignViewModel(MainViewModel shell, string campaignName)
+    [ObservableProperty]
+    private string currentSection = "Adventures";
+
+    public string SectionTitle => CurrentSection;
+    public string SectionHint => CurrentSection switch
     {
-        this.shell = shell;
-        CampaignName = campaignName;
+        "Adventures" => "Chapitres, scènes, chronologie…",
+        "NPCs" => "PNJ, factions, relations…",
+        "Places" => "Lieux, régions, cartes…",
+        "Players" => "PJ, fiches, notes…",
+        _ => "—"
+    };
+
+    partial void OnCurrentSectionChanged(string value)
+    {
+        OnPropertyChanged(nameof(SectionTitle));
+        OnPropertyChanged(nameof(SectionHint));
     }
 
-    public void BackToHome()
+    [RelayCommand]
+    private void Navigate(string section)
     {
-        shell.NavigateHome();
+        CurrentSection = section;
+    }
+
+    [RelayCommand]
+    private void GoHome()
+    {
+        // TODO: naviguer vers HomeView
+    }
+
+    [RelayCommand]
+    private void Export()
+    {
+        // TODO: export PDF/JSON etc.
     }
 }

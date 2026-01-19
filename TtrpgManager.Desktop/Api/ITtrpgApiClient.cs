@@ -6,6 +6,6 @@ namespace TtrpgManager.Desktop.Api;
 
 public interface ITtrpgApiClient
 {
-    Task<List<CampaignDto>> ListCampaignsAsync(
+    Task<List<CampaignDto>> GetCampaignsAsync(
         CancellationToken cancellationToken = default);
 }
